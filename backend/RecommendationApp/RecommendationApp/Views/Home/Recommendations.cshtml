@@ -1,0 +1,33 @@
+@model dynamic
+
+<h2>Recommended Items</h2>
+
+<div>
+    <h3>Collaborative Filtering Recommendations</h3>
+    <ul>
+        @foreach (var item in Model.Collaborative)
+        {
+            <li>@item</li>
+        }
+    </ul>
+</div>
+
+<div>
+    <h3>Content-Based Filtering Recommendations</h3>
+    <ul>
+        @foreach (var item in Model.ContentBased)
+        {
+            <li>@item</li>
+        }
+    </ul>
+</div>
+
+<div>
+    <h3>Azure ML Recommendations</h3>
+    <ul>
+        @foreach (var item in Model.Azure)
+        {
+            <li>@item</li>
+        }
+    </ul>
+</div>
